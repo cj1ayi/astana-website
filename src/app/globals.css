@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E8781A;
+  --color-primary-hover: #D06A10;
+  --color-ice-blue: #E8F4FD;
+  --color-dark-navy: #1B2A4A;
+  --color-slate-gray: #5A6B7F;
+  --color-frost-blue: #F0F7FC;
+  --color-deep-navy: #0F1B2D;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+
+  --animate-scroll-left: scroll-left 30s linear infinite;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(24px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ─── Base Styles ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ice-blue);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-gray);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-navy);
+}
+
+/* Pause carousel on hover */
+.scroll-container:hover .animate-scroll-left {
+  animation-play-state: paused;
+}
