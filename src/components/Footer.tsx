@@ -1,4 +1,5 @@
 import { Facebook } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -40,52 +41,52 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a
+                <Link
                   href="/#home"
                   className="hover:text-primary transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#about"
                   className="hover:text-primary transition-colors"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#services"
                   className="hover:text-primary transition-colors"
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/facilities"
                   className="hover:text-primary transition-colors"
                 >
                   Facilities
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/careers"
                   className="hover:text-primary transition-colors"
                 >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#contact"
                   className="hover:text-primary transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -108,12 +109,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs uppercase tracking-widest font-bold text-slate-500">
           <p>© 2026 Astana Cold Chain Inc. All Rights Reserved.</p>
-          <a
+          <Link
             href="/privacy-policy"
             className="hover:text-slate-300 transition-colors"
           >
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
