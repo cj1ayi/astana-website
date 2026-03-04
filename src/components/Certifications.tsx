@@ -56,7 +56,7 @@ export default function Certifications() {
         <div className="flex flex-wrap justify-center gap-4">
           {certifications.map((cert, i) => (
             <FadeInOnScroll key={cert.code} delay={i * 50}>
-              <div className="group relative flex items-center gap-3 p-4 rounded-2xl bg-frost-blue border border-ice-blue hover:bg-primary hover:border-primary transition-all duration-300 cursor-default w-[calc(50%-0.5rem)] sm:w-auto min-w-[140px]">
+              <div className="group relative flex items-center gap-3 p-4 rounded-2xl bg-frost-blue border border-ice-blue hover:bg-primary hover:border-primary transition-all duration-300 cursor-default w-[calc(50%-0.5rem)] sm:w-auto min-w-[140px] hover:z-30 z-0">
                 <img
                   src={cert.img}
                   alt={cert.code}
@@ -67,7 +67,7 @@ export default function Certifications() {
                 </span>
 
                 {/* Tooltip on hover */}
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-20">
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50">
                   <div className="bg-dark-navy text-white text-xs rounded-xl px-4 py-3 shadow-xl max-w-[220px] text-center">
                     <p className="font-bold">{cert.name}</p>
                     <p className="text-white/70 mt-1">{cert.detail}</p>
