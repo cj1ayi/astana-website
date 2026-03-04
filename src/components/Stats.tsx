@@ -12,7 +12,7 @@ function useCountUp(end: number, duration: number = 2000) {
       ([entry]) => {
         if (entry.isIntersecting) setStarted(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -40,9 +40,9 @@ function useCountUp(end: number, duration: number = 2000) {
 
 const stats = [
   { value: 6189, suffix: "+", label: "Pallet Positions" },
-  { value: 13, suffix: "", label: "Cold Chambers" },
+  { value: 12, suffix: "", label: "Cold Chambers" },
   { value: 22, suffix: "°C", label: "Capability", prefix: "-" },
-  { value: 11, suffix: "", label: "Loading Docks" },
+  { value: 12, suffix: "", label: "Loading Docks" },
   { value: 24, suffix: "/7", label: "Operations" },
 ];
 

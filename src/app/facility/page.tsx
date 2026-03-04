@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -144,14 +145,18 @@ export default function FacilityPage() {
         <section className="relative min-h-[55vh] flex items-end overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/facility/astana-aerial.png')" }}
+            style={{
+              backgroundImage: "url('/images/facility/astana-aerial.png')",
+            }}
           />
           <div className="absolute inset-0 bg-dark-navy/65" />
 
           <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-16">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-white/50 text-xs font-semibold uppercase tracking-widest mb-6">
-              <a href="/" className="hover:text-white transition-colors">Home</a>
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
               <ChevronRight className="w-3 h-3" />
               <span className="text-white/80">Facility</span>
             </div>
@@ -202,11 +207,16 @@ export default function FacilityPage() {
                   key={spec.label}
                   className="p-6 rounded-2xl bg-frost-blue border border-ice-blue hover:border-primary/20 hover:shadow-md transition-all"
                 >
-                  <spec.Icon className="w-5 h-5 text-primary mb-3" strokeWidth={1.75} />
+                  <spec.Icon
+                    className="w-5 h-5 text-primary mb-3"
+                    strokeWidth={1.75}
+                  />
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-gray mb-1">
                     {spec.label}
                   </p>
-                  <p className="text-lg font-black text-dark-navy">{spec.value}</p>
+                  <p className="text-lg font-black text-dark-navy">
+                    {spec.value}
+                  </p>
                 </div>
               ))}
             </div>
@@ -222,8 +232,9 @@ export default function FacilityPage() {
               </p>
               <h2 className="text-4xl font-black">Cold Storage Chambers</h2>
               <p className="text-slate-gray mt-4 max-w-xl mx-auto">
-                13 total chambers across three temperature zones, each engineered
-                for specific product categories and compliance requirements.
+                13 total chambers across three temperature zones, each
+                engineered for specific product categories and compliance
+                requirements.
               </p>
             </div>
 
@@ -233,19 +244,28 @@ export default function FacilityPage() {
                   key={chamber.title}
                   className={`rounded-3xl border p-8 ${chamber.color}`}
                 >
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 ${chamber.iconColor}`}>
+                  <div
+                    className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 ${chamber.iconColor}`}
+                  >
                     <chamber.Icon className="w-6 h-6" strokeWidth={1.75} />
                   </div>
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-xl font-black text-dark-navy">{chamber.title}</h3>
+                    <h3 className="text-xl font-black text-dark-navy">
+                      {chamber.title}
+                    </h3>
                     <span className="text-xs font-bold bg-white/70 px-3 py-1 rounded-full text-slate-gray">
                       {chamber.count}
                     </span>
                   </div>
-                  <p className="text-sm font-bold text-primary mb-6">{chamber.temp}</p>
+                  <p className="text-sm font-bold text-primary mb-6">
+                    {chamber.temp}
+                  </p>
                   <ul className="space-y-2.5">
                     {chamber.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-slate-gray">
+                      <li
+                        key={f}
+                        className="flex items-start gap-2.5 text-sm text-slate-gray"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
                         {f}
                       </li>
@@ -264,7 +284,9 @@ export default function FacilityPage() {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
                 Infrastructure
               </p>
-              <h2 className="text-4xl font-black">Technology &amp; Equipment</h2>
+              <h2 className="text-4xl font-black">
+                Technology &amp; Equipment
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -274,12 +296,20 @@ export default function FacilityPage() {
                   className="p-8 rounded-3xl bg-frost-blue border border-ice-blue"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                    <section.Icon className="w-6 h-6 text-primary" strokeWidth={1.75} />
+                    <section.Icon
+                      className="w-6 h-6 text-primary"
+                      strokeWidth={1.75}
+                    />
                   </div>
-                  <h3 className="text-xl font-black text-dark-navy mb-5">{section.title}</h3>
+                  <h3 className="text-xl font-black text-dark-navy mb-5">
+                    {section.title}
+                  </h3>
                   <ul className="space-y-3">
                     {section.items.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-slate-gray">
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-sm text-slate-gray"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
                         {item}
                       </li>
@@ -303,7 +333,10 @@ export default function FacilityPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {galleryImages.map((img) => (
-                <div key={img.src} className="aspect-square rounded-2xl overflow-hidden">
+                <div
+                  key={img.src}
+                  className="aspect-square rounded-2xl overflow-hidden"
+                >
                   <img
                     src={img.src}
                     alt={img.alt}
@@ -341,18 +374,18 @@ export default function FacilityPage() {
               create a solution that works for your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 href="/#contact"
                 className="px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-primary-hover transition-colors shadow-lg shadow-primary/30"
               >
                 Inquire Now
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#services"
                 className="px-8 py-4 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white/20 transition-colors"
               >
                 View Our Services
-              </a>
+              </Link>
             </div>
           </div>
         </section>

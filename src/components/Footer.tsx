@@ -100,7 +100,6 @@ export default function Footer() {
               <li>BPI &amp; BFAR Licensed</li>
               <li>SEC Registered</li>
               <li>RBI Accredited</li>
-              <li>GMP Certified</li>
               <li>GOP Compliant</li>
             </ul>
           </div>

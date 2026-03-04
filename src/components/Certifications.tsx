@@ -38,12 +38,6 @@ const certifications = [
     detail: "Accredited Facility",
   },
   {
-    code: "GMP",
-    img: "/images/certs/GMP.webp",
-    name: "Good Manufacturing Practice",
-    detail: "Certified for Quality Standards",
-  },
-  {
     code: "GOP",
     img: "/images/certs/GOP.webp",
     name: "Good Operating Practice",

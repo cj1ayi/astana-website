@@ -47,13 +47,13 @@ const services: Service[] = [
   {
     Icon: Package,
     title: "WMS Tracking",
-    desc: "Real-time inventory management with cloud-based reporting and full batch traceability via 3MWorks WMS.",
+    desc: "Real-time inventory management with cloud-based reporting and full batch traceability.",
     features: ["FIFO/FEFO management", "RF picking & barcode scanning"],
   },
   {
     Icon: Truck,
     title: "Loading & Logistics",
-    desc: "11 covered loading docks with plug-ins to prevent temperature loss during inbound and outbound operations.",
+    desc: "12 covered loading docks with plug-ins to prevent temperature loss during inbound and outbound operations.",
     features: ["335 sqm loading bay", "830 sqm parking area"],
   },
   {
@@ -95,37 +95,38 @@ export default function Services() {
             const { Icon } = service;
             return (
               <FadeInOnScroll key={service.title} delay={i * 50}>
-              <div
-                className="group bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  {Icon ? (
-                    <Icon className="w-6 h-6 text-primary" strokeWidth={1.75} />
-                  ) : (
-                    <span className="text-2xl leading-none">
-                      {service.emoji}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-slate-gray leading-relaxed mb-6">
-                  {service.desc}
-                </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-center gap-2 text-sm font-semibold text-dark-navy"
-                    >
-                      <Check
-                        className="w-4 h-4 text-primary shrink-0"
-                        strokeWidth={2.5}
+                <div className="group bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                    {Icon ? (
+                      <Icon
+                        className="w-6 h-6 text-primary"
+                        strokeWidth={1.75}
                       />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    ) : (
+                      <span className="text-2xl leading-none">
+                        {service.emoji}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-slate-gray leading-relaxed mb-6">
+                    {service.desc}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-sm font-semibold text-dark-navy"
+                      >
+                        <Check
+                          className="w-4 h-4 text-primary shrink-0"
+                          strokeWidth={2.5}
+                        />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </FadeInOnScroll>
             );
           })}
