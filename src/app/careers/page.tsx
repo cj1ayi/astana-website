@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Clock, ChevronRight, Mail, AlertCircle } from "lucide-react";
@@ -76,7 +77,7 @@ export default function CareersPage() {
         <section className="bg-ice-blue border-b border-ice-blue py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-gray mb-6">
-              <a href="/" className="hover:text-primary transition-colors">Home</a>
+              <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight className="w-3 h-3" />
               <span className="text-dark-navy">Careers</span>
             </div>
