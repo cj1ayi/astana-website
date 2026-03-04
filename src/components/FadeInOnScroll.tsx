@@ -8,9 +8,14 @@ type Props = {
   className?: string;
 };
 
-export default function FadeInOnScroll({ children, delay = 0, className = "" }: Props) {
+export default function FadeInOnScroll({
+  children,
+  delay = 0,
+  className = "",
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -20,10 +25,10 @@ export default function FadeInOnScroll({ children, delay = 0, className = "" }: 
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // only triggers once
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(el);
@@ -34,13 +39,18 @@ export default function FadeInOnScroll({ children, delay = 0, className = "" }: 
     <div
       ref={ref}
       className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(24px)",
-        transition: visible
-          ? `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`
-          : "none",
-      }}
+      style={
+        done
+          ? { opacity: 1 } // no transform = no stacking context
+          : {
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(24px)",
+              transition: visible
+                ? `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`
+                : "none",
+            }
+      }
+      onTransitionEnd={() => setDone(true)}
     >
       {children}
     </div>
