@@ -39,12 +39,54 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="/#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="/#about" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="/#services" className="hover:text-primary transition-colors">Services</a></li>
-              <li><a href="/facility" className="hover:text-primary transition-colors">Facility</a></li>
-              <li><a href="/careers" className="hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li>
+                <a
+                  href="/#home"
+                  className="hover:text-primary transition-colors"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#about"
+                  className="hover:text-primary transition-colors"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#services"
+                  className="hover:text-primary transition-colors"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/facilities"
+                  className="hover:text-primary transition-colors"
+                >
+                  Facilities
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/careers"
+                  className="hover:text-primary transition-colors"
+                >
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#contact"
+                  className="hover:text-primary transition-colors"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -57,6 +99,8 @@ export default function Footer() {
               <li>BPI &amp; BFAR Licensed</li>
               <li>SEC Registered</li>
               <li>RBI Accredited</li>
+              <li>GMP Certified</li>
+              <li>GOP Compliant</li>
             </ul>
           </div>
         </div>
@@ -64,7 +108,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs uppercase tracking-widest font-bold text-slate-500">
           <p>© 2026 Astana Cold Chain Inc. All Rights Reserved.</p>
-          <a href="/privacy-policy" className="hover:text-slate-300 transition-colors">
+          <a
+            href="/privacy-policy"
+            className="hover:text-slate-300 transition-colors"
+          >
             Privacy Policy
           </a>
         </div>

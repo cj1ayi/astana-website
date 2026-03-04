@@ -223,9 +223,6 @@ export default function Contact() {
                 <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-2">
                   Business Development
                 </p>
-                <p className="text-lg font-bold text-dark-navy">Raquel Tan</p>
-                <p className="text-sm text-slate-gray mb-4">Business Development Head</p>
-
                 <div className="space-y-3">
                   <a
                     href="tel:+639128888821"

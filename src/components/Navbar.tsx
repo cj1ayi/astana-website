@@ -3,26 +3,21 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-type NavLink = { label: string; href: string; page?: boolean };
+type NavLink = { label: string; href: string };
 
 const navLinks: NavLink[] = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Facility", href: "#facility" },
-  { label: "Careers", href: "/careers", page: true },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Facilities", href: "/facilities" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
-
-  // Anchor links get prefixed with "/" on sub-pages; page links are used as-is
-  const resolvedHref = (link: NavLink) =>
-    link.page ? link.href : isHome ? link.href : `/${link.href}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -40,7 +35,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href={isHome ? "#home" : "/"} className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <img
             src="/images/logo.png"
             alt="Astana Cold Chain Logo"
@@ -63,9 +58,9 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={resolvedHref(link)}
+              href={link.href}
               className={`text-sm font-semibold transition-colors ${
-                link.page && pathname === link.href
+                !link.href.includes("#") && pathname === link.href
                   ? "text-primary"
                   : "text-slate-gray hover:text-primary"
               }`}
@@ -74,7 +69,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={isHome ? "#contact" : "/#contact"}
+            href="/#contact"
             className="px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary-hover transition-colors"
           >
             Inquire Now
@@ -99,7 +94,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={resolvedHref(link)}
+              href={link.href}
               onClick={() => setMobileOpen(false)}
               className="block py-3 text-sm font-semibold text-slate-gray hover:text-primary transition-colors"
             >
@@ -107,7 +102,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={isHome ? "#contact" : "/#contact"}
+            href="/#contact"
             onClick={() => setMobileOpen(false)}
             className="mt-3 block text-center py-3 px-5 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary-hover transition-colors"
           >

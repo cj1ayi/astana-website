@@ -1,3 +1,4 @@
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 import {
   Snowflake,
   Thermometer,
@@ -6,9 +7,19 @@ import {
   Truck,
   Shield,
   Check,
+  ShelvingUnit,
+  type LucideIcon,
 } from "lucide-react";
 
-const services = [
+type Service = {
+  Icon?: LucideIcon;
+  emoji?: string;
+  title: string;
+  desc: string;
+  features: string[];
+};
+
+const services: Service[] = [
   {
     Icon: Snowflake,
     title: "Cold Storage",
@@ -51,6 +62,15 @@ const services = [
     desc: "Full redundancy systems with round-the-clock security, CCTV, and centralized temperature logging.",
     features: ["CCTV with 6-month retention", "2× 500KVA generator backup"],
   },
+  {
+    Icon: ShelvingUnit,
+    title: "Dry Storage",
+    desc: "Ambient temperature warehousing for non-perishable goods, packaging materials, and dry ingredients with full inventory management.",
+    features: [
+      "Ambient temperature controlled",
+      "Integrated with WMS tracking",
+    ],
+  },
 ];
 
 export default function Services() {
@@ -71,37 +91,44 @@ export default function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="group bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.Icon
-                  className="w-6 h-6 text-primary"
-                  strokeWidth={1.75}
-                />
+          {services.map((service, i) => {
+            const { Icon } = service;
+            return (
+              <FadeInOnScroll key={service.title} delay={i * 50}>
+              <div
+                className="group bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  {Icon ? (
+                    <Icon className="w-6 h-6 text-primary" strokeWidth={1.75} />
+                  ) : (
+                    <span className="text-2xl leading-none">
+                      {service.emoji}
+                    </span>
+                  )}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-slate-gray leading-relaxed mb-6">
+                  {service.desc}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-sm font-semibold text-dark-navy"
+                    >
+                      <Check
+                        className="w-4 h-4 text-primary shrink-0"
+                        strokeWidth={2.5}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="text-slate-gray leading-relaxed mb-6">
-                {service.desc}
-              </p>
-              <ul className="space-y-2">
-                {service.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-center gap-2 text-sm font-semibold text-dark-navy"
-                  >
-                    <Check
-                      className="w-4 h-4 text-primary shrink-0"
-                      strokeWidth={2.5}
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+              </FadeInOnScroll>
+            );
+          })}
         </div>
       </div>
     </section>

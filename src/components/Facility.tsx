@@ -1,20 +1,18 @@
-import { Ruler, Building, FlaskConical, BatteryFull, Wind, Sun, Wrench, LayoutGrid } from "lucide-react";
+import { Ruler, Building, FlaskConical, BatteryFull } from "lucide-react";
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 const specs = [
-  { Icon: Ruler, label: "Lot Area", value: "5,443 sqm" },
-  { Icon: Building, label: "Floor Area", value: "4,500 sqm" },
-  { Icon: FlaskConical, label: "Refrigeration", value: "Ammonia System" },
-  { Icon: BatteryFull, label: "Backup Power", value: "2× 500KVA Generators" },
-  { Icon: Wind, label: "Cooling", value: "Inverter System" },
-  { Icon: Sun, label: "Energy", value: "Solar Panel Ready" },
-  { Icon: Wrench, label: "Equipment", value: "European-Supplied" },
-  { Icon: LayoutGrid, label: "Racking", value: "Double Deep, 7 High" },
+  { Icon: Ruler,       label: "Lot Area",      value: "5,443 sqm"            },
+  { Icon: Building,    label: "Floor Area",     value: "4,500 sqm"            },
+  { Icon: FlaskConical,label: "Refrigeration",  value: "Ammonia System"       },
+  { Icon: BatteryFull, label: "Backup Power",   value: "2× 500KVA Generators" },
 ];
 
 export default function Facility() {
   return (
     <section id="facility" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
+        <FadeInOnScroll>
         <div className="bg-frost-blue rounded-[2rem] overflow-hidden shadow-xl border border-primary/5">
           <div className="flex flex-col lg:flex-row">
             {/* Photo */}
@@ -56,8 +54,8 @@ export default function Facility() {
                   Metro Manila thoroughfares.
                 </p>
                 <a
-                  href="/facility"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover transition-colors text-sm"
+                  href="/facilities"
+                  className="text-primary font-bold hover:underline inline-flex items-center gap-2 text-sm"
                 >
                   View Full Facility Details
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -66,6 +64,7 @@ export default function Facility() {
             </div>
           </div>
         </div>
+        </FadeInOnScroll>
       </div>
     </section>
   );

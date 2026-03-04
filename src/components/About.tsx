@@ -1,4 +1,5 @@
 import { Building2, Star, Wrench } from "lucide-react";
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 export default function About() {
   const highlights = [
@@ -24,6 +25,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Text Content */}
+          <FadeInOnScroll>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
               About Us
@@ -60,8 +62,10 @@ export default function About() {
               ))}
             </div>
           </div>
+          </FadeInOnScroll>
 
           {/* Photo Grid */}
+          <FadeInOnScroll delay={150}>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="h-64 rounded-3xl overflow-hidden">
@@ -96,6 +100,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          </FadeInOnScroll>
         </div>
       </div>
     </section>
