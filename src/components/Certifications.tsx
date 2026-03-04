@@ -53,10 +53,10 @@ export default function Certifications() {
           Certified &amp; Registered
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {certifications.map((cert, i) => (
             <FadeInOnScroll key={cert.code} delay={i * 50}>
-              <div className="group relative flex items-center gap-3 p-4 rounded-2xl bg-frost-blue border border-ice-blue hover:bg-primary hover:border-primary transition-all duration-300 cursor-default">
+              <div className="group relative flex items-center gap-3 p-4 rounded-2xl bg-frost-blue border border-ice-blue hover:bg-primary hover:border-primary transition-all duration-300 cursor-default w-[calc(50%-0.5rem)] md:w-auto">
                 <img
                   src={cert.img}
                   alt={cert.code}
