@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
 type NavLink = { label: string; href: string };
 
@@ -35,8 +37,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3">
-          <img
+        <Link href="/" className="flex items-center gap-3">
+          <Image
             src="/images/logo.png"
             alt="Astana Cold Chain Logo"
             width={40}
@@ -51,12 +53,12 @@ export default function Navbar() {
               Cold Chain Inc.
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className={`text-sm font-semibold transition-colors ${
@@ -66,14 +68,14 @@ export default function Navbar() {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/#contact"
             className="px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary-hover transition-colors"
           >
             Inquire Now
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,22 +94,22 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-primary/10 px-6 pb-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
               className="block py-3 text-sm font-semibold text-slate-gray hover:text-primary transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/#contact"
             onClick={() => setMobileOpen(false)}
             className="mt-3 block text-center py-3 px-5 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary-hover transition-colors"
           >
             Inquire Now
-          </a>
+          </Link>
         </div>
       )}
     </nav>
