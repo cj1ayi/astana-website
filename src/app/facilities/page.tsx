@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -226,9 +227,9 @@ export default function FacilitiesPage() {
 
           <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-16">
             <div className="flex items-center gap-2 text-white/50 text-xs font-semibold uppercase tracking-widest mb-6">
-              <a href="/" className="hover:text-white transition-colors">
+              <Link href="/" className="hover:text-white transition-colors">
                 Home
-              </a>
+              </Link>
               <ChevronRight className="w-3 h-3" />
               <span className="text-white/80">Facilities</span>
             </div>
@@ -881,18 +882,18 @@ export default function FacilitiesPage() {
               create a solution that works for your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 href="/#contact"
                 className="px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-primary-hover transition-colors shadow-lg shadow-primary/30"
               >
                 Inquire Now
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#services"
                 className="px-8 py-4 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white/20 transition-colors"
               >
                 View Our Services
-              </a>
+              </Link>
             </div>
           </div>
         </section>
