@@ -27,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: "Facilities | Astana Cold Chain Inc.",
   description:
-    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City — 13 cold chambers, 6,189 pallet positions, -22°C capability, European-grade ammonia refrigeration, and 2× 500KVA backup power.",
+    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City — 12 cold chambers, 6,189 pallet positions, -22°C capability, European-grade ammonia refrigeration, and 2× 500KVA backup power.",
 };
 
 // ── Quick-spec overview ───────────────────────────────────────────────────
@@ -39,7 +39,7 @@ const fullSpecs: Spec[] = [
   { Icon: Thermometer, label: "Chiller Temp", value: "0°C to +5°C" },
   { Icon: Package, label: "Pallet Positions", value: "6,189+" },
   { Icon: LayoutGrid, label: "Racking System", value: "Double Deep, 7 High" },
-  { Icon: Truck, label: "Loading Docks", value: "11 Covered Docks" },
+  { Icon: Truck, label: "Loading Docks", value: "12 Covered Docks" },
   { Icon: Building, label: "Loading Bay", value: "335 sqm" },
   { Icon: Wrench, label: "Refrigeration", value: "Ammonia System" },
   { Icon: Wrench, label: "Equipment Origin", value: "European-Supplied" },
@@ -246,9 +246,9 @@ export default function FacilitiesPage() {
             <div className="flex flex-wrap gap-3">
               {[
                 "6,189+ Pallet Positions",
-                "13 Cold Chambers",
+                "12 Cold Chambers",
                 "-22°C Capability",
-                "11 Loading Docks",
+                "12 Loading Docks",
               ].map((stat) => (
                 <span
                   key={stat}
@@ -304,7 +304,7 @@ export default function FacilitiesPage() {
               </p>
               <h2 className="text-4xl font-black">Cold Storage Chambers</h2>
               <p className="text-slate-gray mt-4 max-w-xl mx-auto">
-                13 total chambers across three temperature zones, each
+                12 total chambers across three temperature zones, each
                 engineered for specific product categories and compliance
                 requirements.
               </p>
@@ -355,7 +355,7 @@ export default function FacilitiesPage() {
                   Cold Chamber Configuration
                 </h3>
                 <p className="text-slate-gray mb-6">
-                  13 rooms totalling 6,189 pallet positions — double deep
+                  12 rooms totalling 6,189 pallet positions — double deep
                   racking, 7 pallets high.
                 </p>
                 <div className="overflow-hidden rounded-3xl border border-white">
@@ -411,13 +411,13 @@ export default function FacilitiesPage() {
                           colSpan={3}
                           className="px-5 py-3 font-black text-white text-sm hidden sm:table-cell"
                         >
-                          Total — 13 rooms
+                          Total — 12 rooms
                         </td>
                         <td
                           colSpan={3}
                           className="px-5 py-3 font-black text-white text-sm sm:hidden"
                         >
-                          Total (13 rooms)
+                          Total (12 rooms)
                         </td>
                         <td className="px-5 py-3 text-right font-black text-primary hidden sm:table-cell">
                           6,189
@@ -437,7 +437,7 @@ export default function FacilitiesPage() {
                   {[
                     { label: "Anteroom", value: "0°C to +5°C" },
                     { label: "Loading Bay", value: "335 sqm" },
-                    { label: "Covered Docks", value: "11 + 1 service bay" },
+                    { label: "Covered Docks", value: "12" },
                     { label: "Parking Area", value: "830 sqm" },
                   ].map(({ label, value }) => (
                     <div
