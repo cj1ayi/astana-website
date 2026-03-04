@@ -738,7 +738,7 @@ export default function FacilitiesPage() {
                   alt: "Monitoring Station",
                 },
                 {
-                  src: "/images/facility/machineroom3.jpg",
+                  src: "/images/facility/cctv2.png",
                   alt: "CCTV Coverage",
                 },
                 {
@@ -746,7 +746,7 @@ export default function FacilitiesPage() {
                   alt: "Security Office",
                 },
                 {
-                  src: "/images/facility/waitinglounge2.png",
+                  src: "/images/facility/cctv1.png",
                   alt: "Gate & Perimeter",
                 },
               ].map((img) => (
@@ -842,6 +842,14 @@ export default function FacilitiesPage() {
                 {
                   src: "/images/facility/rackingconfiguration.png",
                   alt: "Floor Plan Configuration",
+                },
+                {
+                  src: "/images/facility/cctv1.png",
+                  alt: "CCTV1",
+                },
+                {
+                  src: "/images/facility/cctv2.png",
+                  alt: "CCTV2",
                 },
               ].map((img) => (
                 <div
