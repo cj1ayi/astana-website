@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     title: "Our Facilities — Astana Cold Chain Inc.",
     description:
       "6,809+ pallet positions, 12 cold chambers, -22°C capability, European ammonia refrigeration, and 2x 500KVA backup power in Muntinlupa City.",
-    images: [{ url: "/images/astana-aerial.jpg", width: 1200, height: 630, alt: "Astana Cold Chain facility aerial view" }],
+    images: [
+      {
+        url: "/images/astana-aerial.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Astana Cold Chain facility aerial view",
+      },
+    ],
   },
 };
 
@@ -466,7 +473,7 @@ export default function FacilitiesPage() {
                   ))}
                 </div>
 
-                <div className="aspect-video rounded-2xl overflow-hidden border border-white/80">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/80">
                   <img
                     src="/images/facility/rackingconfiguration.png"
                     alt="Facility Floor Plan - Racking Configuration"
