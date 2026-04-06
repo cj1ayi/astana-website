@@ -39,9 +39,9 @@ function useCountUp(end: number, duration: number = 2000) {
 }
 
 const stats = [
-  { value: 6189, suffix: "+", label: "Pallet Positions" },
+  { value: 6809, suffix: "+", label: "Pallet Positions" },
   { value: 12, suffix: "", label: "Cold Chambers" },
-  { value: 22, suffix: "°C", label: "Capability", prefix: "-" },
+  { value: 22, suffix: "°C", label: "Temperature Range", prefix: "0 to -" },
   { value: 12, suffix: "", label: "Loading Docks" },
   { value: 24, suffix: "/7", label: "Operations" },
 ];

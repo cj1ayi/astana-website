@@ -25,9 +25,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Facilities | Astana Cold Chain Inc.",
+  title: "Facilities",
   description:
-    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City — 12 cold chambers, 6,189 pallet positions, -22°C capability, European-grade ammonia refrigeration, and 2× 500KVA backup power.",
+    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City — 12 cold chambers, 6,809 pallet positions, 0 to -22°C capability, European-grade ammonia refrigeration, and 2× 500KVA backup power.",
+  openGraph: {
+    title: "Our Facilities — Astana Cold Chain Inc.",
+    description:
+      "6,809+ pallet positions, 12 cold chambers, -22°C capability, European ammonia refrigeration, and 2x 500KVA backup power in Muntinlupa City.",
+    images: [{ url: "/images/astana-aerial.jpg", width: 1200, height: 630, alt: "Astana Cold Chain facility aerial view" }],
+  },
 };
 
 // ── Quick-spec overview ───────────────────────────────────────────────────
@@ -35,9 +41,9 @@ type Spec = { Icon: LucideIcon; label: string; value: string };
 const fullSpecs: Spec[] = [
   { Icon: Ruler, label: "Lot Area", value: "5,443 sqm" },
   { Icon: Building, label: "Floor Area", value: "4,500 sqm" },
-  { Icon: Snowflake, label: "Min Temperature", value: "-22°C" },
+  { Icon: Snowflake, label: "Temperature Range", value: "0°C to -22°C" },
   { Icon: Thermometer, label: "Chiller Temp", value: "0°C to +5°C" },
-  { Icon: Package, label: "Pallet Positions", value: "6,189+" },
+  { Icon: Package, label: "Pallet Positions", value: "6,809+" },
   { Icon: LayoutGrid, label: "Racking System", value: "Double Deep, 7 High" },
   { Icon: Truck, label: "Loading Docks", value: "12 Covered Docks" },
   { Icon: Building, label: "Loading Bay", value: "335 sqm" },
@@ -57,7 +63,7 @@ const chambers = [
     Icon: Snowflake,
     title: "Freezer Rooms",
     count: "12 Rooms",
-    temp: "-18°C to -22°C",
+    temp: "0°C to -22°C",
     color: "bg-blue-50 border-blue-100",
     iconColor: "text-blue-500 bg-blue-100",
     features: [
@@ -99,19 +105,19 @@ const chambers = [
 
 // ── Room-by-room table data ───────────────────────────────────────────────
 const rooms = [
-  { room: 1, type: "Freezer" as const, pp: 388 },
-  { room: 2, type: "Freezer" as const, pp: 388 },
-  { room: 3, type: "Freezer" as const, pp: 388 },
-  { room: 4, type: "Freezer" as const, pp: 388 },
-  { room: 5, type: "Freezer" as const, pp: 388 },
-  { room: 6, type: "Freezer" as const, pp: 381 },
-  { room: 7, type: "Freezer" as const, pp: 892 },
-  { room: 8, type: "Freezer" as const, pp: 556 },
-  { room: 9, type: "Freezer" as const, pp: 584 },
-  { room: 10, type: "Freezer" as const, pp: 612 },
-  { room: 11, type: "Freezer" as const, pp: 612 },
-  { room: 12, type: "Chiller" as const, pp: 612 },
-  { room: 13, type: "BlastFreezer" as const, pp: 3 },
+  { room: 1, type: "Freezer" as const, pp: 416 },
+  { room: 2, type: "Freezer" as const, pp: 416 },
+  { room: 3, type: "Freezer" as const, pp: 416 },
+  { room: 4, type: "Freezer" as const, pp: 416 },
+  { room: 5, type: "Freezer" as const, pp: 416 },
+  { room: 6, type: "Freezer" as const, pp: 409 },
+  { room: 7, type: "Freezer" as const, pp: 956 },
+  { room: 8, type: "Freezer" as const, pp: 596 },
+  { room: 9, type: "Freezer" as const, pp: 626 },
+  { room: 10, type: "Freezer" as const, pp: 656 },
+  { room: 11, type: "Freezer" as const, pp: 656 },
+  { room: 12, type: "Freezer" as const, pp: 656 },
+  { room: 13, type: "Dry" as const, pp: 174 },
 ];
 
 const roomStyle = {
@@ -119,7 +125,7 @@ const roomStyle = {
     badge: "bg-blue-50 text-blue-700 border-blue-200",
     Icon: Snowflake,
     label: "Freezer",
-    temp: "-18°C to -22°C",
+    temp: "0°C to -22°C",
   },
   Chiller: {
     badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
@@ -132,6 +138,12 @@ const roomStyle = {
     Icon: Zap,
     label: "Blast Freezer",
     temp: "Rapid pull-down",
+  },
+  Dry: {
+    badge: "bg-amber-50 text-amber-700 border-amber-200",
+    Icon: Package,
+    label: "Dry",
+    temp: "Ambient",
   },
 };
 
@@ -245,9 +257,9 @@ export default function FacilitiesPage() {
 
             <div className="flex flex-wrap gap-3">
               {[
-                "6,189+ Pallet Positions",
+                "6,809+ Pallet Positions",
                 "12 Cold Chambers",
-                "-22°C Capability",
+                "0 to -22°C Range",
                 "12 Loading Docks",
               ].map((stat) => (
                 <span
@@ -355,7 +367,7 @@ export default function FacilitiesPage() {
                   Cold Chamber Configuration
                 </h3>
                 <p className="text-slate-gray mb-6">
-                  12 rooms totalling 6,189 pallet positions — double deep
+                  12 rooms totalling 6,809 pallet positions — double deep
                   racking, 7 pallets high.
                 </p>
                 <div className="overflow-hidden rounded-3xl border border-white">
@@ -420,7 +432,7 @@ export default function FacilitiesPage() {
                           Total (12 rooms)
                         </td>
                         <td className="px-5 py-3 text-right font-black text-primary hidden sm:table-cell">
-                          6,189
+                          6,809
                         </td>
                       </tr>
                     </tfoot>

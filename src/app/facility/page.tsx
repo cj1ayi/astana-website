@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Facility | Astana Cold Chain Inc.",
   description:
-    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City. 6,189+ pallet positions, 13 cold chambers, -22°C capability, European-grade ammonia refrigeration system.",
+    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City. 6,809+ pallet positions, 13 cold chambers, -22°C capability, European-grade ammonia refrigeration system.",
 };
 
 const fullSpecs = [
@@ -30,7 +30,7 @@ const fullSpecs = [
   { Icon: Building, label: "Floor Area", value: "4,500 sqm" },
   { Icon: Snowflake, label: "Min Temperature", value: "-22°C" },
   { Icon: Thermometer, label: "Chiller Temp", value: "0°C to +5°C" },
-  { Icon: Package, label: "Pallet Positions", value: "6,189+" },
+  { Icon: Package, label: "Pallet Positions", value: "6,809+" },
   { Icon: LayoutGrid, label: "Racking System", value: "Double Deep, 7 High" },
   { Icon: Truck, label: "Loading Docks", value: "11 Covered Docks" },
   { Icon: Building, label: "Loading Bay", value: "335 sqm" },
@@ -173,7 +173,7 @@ export default function FacilityPage() {
             {/* Quick stat pills */}
             <div className="flex flex-wrap gap-3">
               {[
-                "6,189+ Pallet Positions",
+                "6,809+ Pallet Positions",
                 "13 Cold Chambers",
                 "-22°C Capability",
                 "11 Loading Docks",

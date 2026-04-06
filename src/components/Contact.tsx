@@ -13,7 +13,7 @@ export default function Contact() {
     setFormState("submitting");
     const data = new FormData(e.currentTarget);
     try {
-      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const res = await fetch("https://formspree.io/f/xvzvdqrg", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -45,10 +45,11 @@ export default function Contact() {
 
         {/* Top row: Form + Contact Info */}
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
-
           {/* Contact Form */}
           <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-primary/5">
-            <h3 className="text-2xl font-black text-dark-navy mb-2">Send a Message</h3>
+            <h3 className="text-2xl font-black text-dark-navy mb-2">
+              Send a Message
+            </h3>
             <p className="text-slate-gray text-sm mb-8">
               Fill out the form below and our team will get back to you shortly.
             </p>
@@ -56,13 +57,26 @@ export default function Contact() {
             {formState === "success" ? (
               <div className="flex flex-col items-center justify-center py-16 text-center">
                 <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-8 h-8 text-green-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </div>
-                <h4 className="text-xl font-black text-dark-navy mb-2">Message Sent!</h4>
+                <h4 className="text-xl font-black text-dark-navy mb-2">
+                  Message Sent!
+                </h4>
                 <p className="text-slate-gray text-sm mb-6">
-                  Thank you for reaching out. We&apos;ll be in touch with you shortly.
+                  Thank you for reaching out. We&apos;ll be in touch with you
+                  shortly.
                 </p>
                 <button
                   onClick={() => setFormState("idle")}
@@ -130,9 +144,13 @@ export default function Contact() {
                   </label>
                   <select name="inquiry" className={inputClass}>
                     <option value="">Select a topic…</option>
-                    <option value="Cold Storage Services">Cold Storage Services</option>
+                    <option value="Cold Storage Services">
+                      Cold Storage Services
+                    </option>
                     <option value="Blast Freezing">Blast Freezing</option>
-                    <option value="Warehouse & Logistics">Warehouse &amp; Logistics</option>
+                    <option value="Warehouse & Logistics">
+                      Warehouse &amp; Logistics
+                    </option>
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Others">Others</option>
                   </select>
@@ -168,7 +186,10 @@ export default function Contact() {
                   </button>
                   <p className="text-xs text-slate-gray mt-3">
                     By submitting this form, you agree to our{" "}
-                    <a href="/privacy-policy" className="text-primary hover:underline">
+                    <a
+                      href="/privacy-policy"
+                      className="text-primary hover:underline"
+                    >
                       Privacy Policy
                     </a>
                     .
@@ -182,9 +203,12 @@ export default function Contact() {
           <div className="flex flex-col justify-center bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-primary/5">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-black text-dark-navy mb-1">Get in Touch</h3>
+                <h3 className="text-2xl font-black text-dark-navy mb-1">
+                  Get in Touch
+                </h3>
                 <p className="text-slate-gray text-sm">
-                  Reach out directly or visit us at our facility in Muntinlupa City.
+                  Reach out directly or visit us at our facility in Muntinlupa
+                  City.
                 </p>
               </div>
 
@@ -205,15 +229,24 @@ export default function Contact() {
                 </p>
                 <ul className="text-slate-gray text-sm space-y-1.5">
                   <li className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" strokeWidth={1.75} />
+                    <MapPin
+                      className="w-4 h-4 text-primary shrink-0 mt-0.5"
+                      strokeWidth={1.75}
+                    />
                     ~16.2 km to NAIA (30–45 min)
                   </li>
                   <li className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" strokeWidth={1.75} />
+                    <MapPin
+                      className="w-4 h-4 text-primary shrink-0 mt-0.5"
+                      strokeWidth={1.75}
+                    />
                     ~23 km to Port Area Manila
                   </li>
                   <li className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" strokeWidth={1.75} />
+                    <MapPin
+                      className="w-4 h-4 text-primary shrink-0 mt-0.5"
+                      strokeWidth={1.75}
+                    />
                     Direct SLEX &amp; Skyway access
                   </li>
                 </ul>
@@ -239,11 +272,18 @@ export default function Contact() {
                     0917 521 7108
                   </a>
                   <a
-                    href="mailto:raqueltan@astanacoldchain.com"
+                    href="mailto:ryanbernabe@astanacoldchain.com,phoebevitales@astanacoldchain.com"
                     className="flex items-center gap-3 text-slate-gray hover:text-primary transition-colors text-sm break-all"
                   >
                     <Mail className="w-4 h-4 shrink-0" strokeWidth={1.75} />
-                    raqueltan@astanacoldchain.com
+                    ryanbernabe@astanacoldchain.com
+                  </a>
+                  <a
+                    href="mailto:phoebevitales@astanacoldchain.com"
+                    className="flex items-center gap-3 text-slate-gray hover:text-primary transition-colors text-sm break-all"
+                  >
+                    <Mail className="w-4 h-4 shrink-0" strokeWidth={1.75} />
+                    phoebevitales@astanacoldchain.com
                   </a>
                 </div>
               </div>

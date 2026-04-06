@@ -5,13 +5,17 @@ import Footer from "@/components/Footer";
 import { MapPin, Clock, ChevronRight, Mail, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Careers | Astana Cold Chain Inc.",
+  title: "Careers",
   description:
     "Join the team at Astana Cold Chain Inc. — Muntinlupa's premier cold storage facility. Explore current job openings in warehouse operations, maintenance, and more.",
+  openGraph: {
+    title: "Careers at Astana Cold Chain Inc.",
+    description:
+      "Explore job openings at Muntinlupa's premier cold storage facility. Warehouse operations, maintenance, and more.",
+  },
 };
 
-// TODO: Confirm actual HR email address before going live
-const HR_EMAIL = "raqueltan@astanacoldchain.com";
+const HR_MAILTO = "mailto:ryanbernabe@astanacoldchain.com,phoebevitales@astanacoldchain.com";
 
 type Job = {
   title: string;
@@ -111,10 +115,17 @@ export default function CareersPage() {
                   Interested in joining Astana Cold Chain? Send your resume/CV and a brief
                   cover letter to{" "}
                   <a
-                    href={`mailto:${HR_EMAIL}`}
+                    href={HR_MAILTO}
                     className="text-primary font-bold hover:underline"
                   >
-                    {HR_EMAIL}
+                    ryanbernabe@astanacoldchain.com
+                  </a>
+                  {" "}or{" "}
+                  <a
+                    href="mailto:phoebevitales@astanacoldchain.com"
+                    className="text-primary font-bold hover:underline"
+                  >
+                    phoebevitales@astanacoldchain.com
                   </a>
                   . Please include the <strong className="text-dark-navy">job title</strong> you&apos;re
                   applying for in the subject line.
@@ -184,7 +195,7 @@ export default function CareersPage() {
 
                   {/* Apply button */}
                   <a
-                    href={`mailto:${HR_EMAIL}?subject=Job Application — ${job.title}`}
+                    href={`${HR_MAILTO}?subject=Job Application — ${job.title}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover transition-colors"
                   >
                     Apply via Email
@@ -198,7 +209,7 @@ export default function CareersPage() {
             <p className="mt-10 text-center text-sm text-slate-gray">
               Don&apos;t see a position that fits? We&apos;re always looking for talented people.{" "}
               <a
-                href={`mailto:${HR_EMAIL}?subject=Open Application — Astana Cold Chain`}
+                href={`${HR_MAILTO}?subject=Open Application — Astana Cold Chain`}
                 className="text-primary font-bold hover:underline"
               >
                 Send your resume

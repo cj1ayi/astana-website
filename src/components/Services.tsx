@@ -25,7 +25,7 @@ const services: Service[] = [
     title: "Cold Storage",
     desc: "Optimized frozen storage environments maintained at consistent sub-zero temperatures for maximum product integrity.",
     features: [
-      "Temp range: -18°C to -22°C",
+      "Temp range: 0°C to -22°C",
       "12 freezer rooms, double deep racking",
     ],
   },

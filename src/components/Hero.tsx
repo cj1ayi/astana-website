@@ -18,19 +18,17 @@ export default function Hero() {
       {/* Content — centered */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
-
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight text-white mb-6">
-            Climate Controlled.
+            Cut Distance.
             <br />
-            <span className="text-primary">Quality Assured.</span>
+            <span className="text-primary">Grow Profit.</span>
           </h1>
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed mb-10">
-             We handle the cold storage with reliability and excellence,
-              so you can concentrate on expansion,
-              profit, and long-term success.
+            We handle the cold storage with reliability and excellence, so you
+            can concentrate on expansion, profit, and long-term success.
           </p>
 
           {/* CTA Buttons */}
@@ -52,16 +50,16 @@ export default function Hero() {
           {/* Quick stats inline */}
           <div className="flex flex-wrap gap-8 justify-center text-white">
             <div>
-              <span className="text-3xl font-black">6,189+</span>
+              <span className="text-3xl font-black">6,809+</span>
               <p className="text-xs font-semibold uppercase tracking-wider text-white/60 mt-1">
                 Pallet Positions
               </p>
             </div>
             <div className="w-px bg-white/20 hidden sm:block" />
             <div>
-              <span className="text-3xl font-black">-22°C</span>
+              <span className="text-3xl font-black">0 to -22°C</span>
               <p className="text-xs font-semibold uppercase tracking-wider text-white/60 mt-1">
-                Min Temperature
+                Temperature Range
               </p>
             </div>
             <div className="w-px bg-white/20 hidden sm:block" />

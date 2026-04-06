@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Astana Cold Chain Inc.",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for Astana Cold Chain Inc. We are committed to protecting your personal information in accordance with the Philippine Data Privacy Act of 2012 (RA 10173).",
 };
@@ -157,10 +157,17 @@ export default function PrivacyPolicy() {
                 <p>
                   <span className="text-slate-gray">Email: </span>
                   <a
-                    href="mailto:raqueltan@astanacoldchain.com"
+                    href="mailto:ryanbernabe@astanacoldchain.com"
                     className="text-primary hover:underline"
                   >
-                    raqueltan@astanacoldchain.com
+                    ryanbernabe@astanacoldchain.com
+                  </a>
+                  {" / "}
+                  <a
+                    href="mailto:phoebevitales@astanacoldchain.com"
+                    className="text-primary hover:underline"
+                  >
+                    phoebevitales@astanacoldchain.com
                   </a>
                 </p>
                 <p>
