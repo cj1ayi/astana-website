@@ -40,11 +40,12 @@ export default function Locations() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {[
                   { label: "Pallet Positions", value: "6,809" },
-                  { label: "Cold Chambers", value: "12" },
+                  { label: "Cold Chambers", value: "13" },
                   { label: "Min Temperature", value: "-22°C" },
+                  { label: "Dry Storage", value: "1" },
                 ].map((s) => (
                   <div
                     key={s.label}

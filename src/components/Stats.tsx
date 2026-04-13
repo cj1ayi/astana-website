@@ -40,8 +40,9 @@ function useCountUp(end: number, duration: number = 2000) {
 
 const stats = [
   { value: 6809, suffix: "+", label: "Pallet Positions" },
-  { value: 12, suffix: "", label: "Cold Chambers" },
-  { value: 22, suffix: "°C", label: "Temperature Range", prefix: "0 to -" },
+  { value: 13, suffix: "", label: "Cold Chambers" },
+  { value: 20, suffix: "°C", label: "Temperature Range", prefix: "-22°C to +" },
+  { value: 1, suffix: "", label: "Dry Storage" },
   { value: 12, suffix: "", label: "Loading Docks" },
   { value: 24, suffix: "/7", label: "Operations" },
 ];
@@ -77,7 +78,7 @@ export default function Stats() {
   return (
     <section className="bg-primary py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {stats.map((stat) => (
             <StatItem key={stat.label} {...stat} />
           ))}

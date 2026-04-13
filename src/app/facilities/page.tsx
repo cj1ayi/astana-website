@@ -27,11 +27,11 @@ import {
 export const metadata: Metadata = {
   title: "Facilities",
   description:
-    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City — 12 cold chambers, 6,809 pallet positions, 0 to -22°C capability, European-grade ammonia refrigeration, and 2× 500KVA backup power.",
+    "Explore Astana Cold Chain's world-class cold storage facility in Muntinlupa City — 13 cold chambers, 6,809 pallet positions, -22°C to +20°C capability, European-grade ammonia refrigeration, and 2× 500KVA backup power.",
   openGraph: {
     title: "Our Facilities — Astana Cold Chain Inc.",
     description:
-      "6,809+ pallet positions, 12 cold chambers, -22°C capability, European ammonia refrigeration, and 2x 500KVA backup power in Muntinlupa City.",
+      "6,809+ pallet positions, 13 cold chambers, -22°C capability, European ammonia refrigeration, and 2x 500KVA backup power in Muntinlupa City.",
     images: [
       {
         url: "/images/astana-aerial.jpg",
@@ -48,7 +48,7 @@ type Spec = { Icon: LucideIcon; label: string; value: string };
 const fullSpecs: Spec[] = [
   { Icon: Ruler, label: "Lot Area", value: "5,443 sqm" },
   { Icon: Building, label: "Floor Area", value: "4,500 sqm" },
-  { Icon: Snowflake, label: "Temperature Range", value: "0°C to -22°C" },
+  { Icon: Snowflake, label: "Temperature Range", value: "-22°C to +20°C" },
   { Icon: Thermometer, label: "Chiller Temp", value: "0°C to +5°C" },
   { Icon: Package, label: "Pallet Positions", value: "6,809+" },
   { Icon: LayoutGrid, label: "Racking System", value: "Double Deep, 7 High" },
@@ -60,7 +60,7 @@ const fullSpecs: Spec[] = [
   { Icon: Wind, label: "Cooling", value: "Inverter System" },
   { Icon: Sun, label: "Energy", value: "Solar Panel Ready" },
   { Icon: Shield, label: "CCTV Retention", value: "6-Month Storage" },
-  { Icon: Package, label: "WMS", value: "3MWorks System" },
+  { Icon: Package, label: "WMS", value: "Cloud-Based System" },
   { Icon: Building, label: "Parking Area", value: "830 sqm" },
 ];
 
@@ -69,8 +69,8 @@ const chambers = [
   {
     Icon: Snowflake,
     title: "Freezer Rooms",
-    count: "12 Rooms",
-    temp: "0°C to -22°C",
+    count: "13 Rooms",
+    temp: "-22°C to +20°C",
     color: "bg-blue-50 border-blue-100",
     iconColor: "text-blue-500 bg-blue-100",
     features: [
@@ -108,6 +108,20 @@ const chambers = [
       "HACCP-compliant food safety process",
     ],
   },
+  {
+    Icon: Package,
+    title: "Dry Storage",
+    count: "1 Room",
+    temp: "Ambient",
+    color: "bg-amber-50 border-amber-100",
+    iconColor: "text-amber-600 bg-amber-100",
+    features: [
+      "174 pallet positions",
+      "Ambient temperature controlled",
+      "Ideal for non-perishables & packaging materials",
+      "Integrated with WMS tracking",
+    ],
+  },
 ];
 
 // ── Room-by-room table data ───────────────────────────────────────────────
@@ -131,8 +145,8 @@ const roomStyle = {
   Freezer: {
     badge: "bg-blue-50 text-blue-700 border-blue-200",
     Icon: Snowflake,
-    label: "Freezer",
-    temp: "0°C to -22°C",
+    label: "Freezer/Chiller/Ambient",
+    temp: "-22°C to +20°C",
   },
   Chiller: {
     badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
@@ -265,8 +279,9 @@ export default function FacilitiesPage() {
             <div className="flex flex-wrap gap-3">
               {[
                 "6,809+ Pallet Positions",
-                "12 Cold Chambers",
-                "0 to -22°C Range",
+                "13 Cold Chambers",
+                "1 Dry Storage",
+                "-22°C to +20°C Range",
                 "12 Loading Docks",
               ].map((stat) => (
                 <span
@@ -323,7 +338,7 @@ export default function FacilitiesPage() {
               </p>
               <h2 className="text-4xl font-black">Cold Storage Chambers</h2>
               <p className="text-slate-gray mt-4 max-w-xl mx-auto">
-                12 total chambers across three temperature zones, each
+                13 total chambers across three temperature zones, each
                 engineered for specific product categories and compliance
                 requirements.
               </p>
@@ -374,7 +389,7 @@ export default function FacilitiesPage() {
                   Cold Chamber Configuration
                 </h3>
                 <p className="text-slate-gray mb-6">
-                  12 rooms totalling 6,809 pallet positions — double deep
+                  13 rooms totalling 6,809 pallet positions — double deep
                   racking, 7 pallets high.
                 </p>
                 <div className="overflow-hidden rounded-3xl border border-white">
@@ -430,13 +445,13 @@ export default function FacilitiesPage() {
                           colSpan={3}
                           className="px-5 py-3 font-black text-white text-sm hidden sm:table-cell"
                         >
-                          Total — 12 rooms
+                          Total — 13 rooms
                         </td>
                         <td
                           colSpan={3}
                           className="px-5 py-3 font-black text-white text-sm sm:hidden"
                         >
-                          Total (12 rooms)
+                          Total (13 rooms)
                         </td>
                         <td className="px-5 py-3 text-right font-black text-primary hidden sm:table-cell">
                           6,809
@@ -700,7 +715,7 @@ export default function FacilitiesPage() {
                     "6-month video file retention",
                     "Remote access monitoring",
                     "Controlled entry per cold room",
-                    "3MWorks WMS — RF picking & barcode scanning",
+                    "Cloud-based WMS — RF picking & barcode scanning",
                     "FIFO/FEFO inventory management",
                   ].map((item) => (
                     <li

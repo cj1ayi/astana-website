@@ -57,7 +57,7 @@ export default function Hero() {
             </div>
             <div className="w-px bg-white/20 hidden sm:block" />
             <div>
-              <span className="text-3xl font-black">0 to -22°C</span>
+              <span className="text-3xl font-black">-22°C to +20°C</span>
               <p className="text-xs font-semibold uppercase tracking-wider text-white/60 mt-1">
                 Temperature Range
               </p>

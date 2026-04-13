@@ -4,10 +4,11 @@ import {
   Thermometer,
   Zap,
   Package,
-  Truck,
+  SquarePower,
   Shield,
   Check,
   ShelvingUnit,
+  Truck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -16,7 +17,7 @@ type Service = {
   emoji?: string;
   title: string;
   desc: string;
-  features: string[];
+  features?: string[];
 };
 
 const services: Service[] = [
@@ -25,18 +26,15 @@ const services: Service[] = [
     title: "Cold Storage",
     desc: "Optimized frozen storage environments maintained at consistent sub-zero temperatures for maximum product integrity.",
     features: [
-      "Temp range: 0°C to -22°C",
-      "12 freezer rooms, double deep racking",
+      "Temp range: -22°C to +20°C",
+      "13 rooms, double deep racking + 1 blast freezer room",
     ],
   },
   {
     Icon: Thermometer,
     title: "Chiller Storage",
     desc: "Precision temperature control for dairy, produce, and pharmaceutical-grade requirements.",
-    features: [
-      "Temp range: 0°C to +5°C",
-      "Anteroom maintained at controlled temps",
-    ],
+    features: ["Temp range: 0°C to +5°C"],
   },
   {
     Icon: Zap,
@@ -51,16 +49,16 @@ const services: Service[] = [
     features: ["FIFO/FEFO management", "RF picking & barcode scanning"],
   },
   {
-    Icon: Truck,
-    title: "Loading & Logistics",
-    desc: "12 covered loading docks with plug-ins to prevent temperature loss during inbound and outbound operations.",
-    features: ["335 sqm loading bay", "830 sqm parking area"],
+    Icon: SquarePower,
+    title: "Power Supply",
+    desc: "Total installed capacity of 1 MW from prime-rated generator units",
+    features: ["2× 500KVA generator backup"],
   },
   {
     Icon: Shield,
     title: "24/7 Security & Monitoring",
     desc: "Full redundancy systems with round-the-clock security, CCTV, and centralized temperature logging.",
-    features: ["CCTV with 6-month retention", "2× 500KVA generator backup"],
+    features: ["CCTV equipped in all areas"],
   },
   {
     Icon: ShelvingUnit,
@@ -70,6 +68,11 @@ const services: Service[] = [
       "Ambient temperature controlled",
       "Integrated with WMS tracking",
     ],
+  },
+  {
+    Icon: Truck,
+    title: "Loading & Logistics",
+    desc: "Our dock areas are fully equipped with dock levelers to facilitate safe and efficient loading and unloading operations",
   },
 ];
 
@@ -113,7 +116,7 @@ export default function Services() {
                     {service.desc}
                   </p>
                   <ul className="space-y-2">
-                    {service.features.map((feature) => (
+                    {service.features?.map((feature) => (
                       <li
                         key={feature}
                         className="flex items-center gap-2 text-sm font-semibold text-dark-navy"

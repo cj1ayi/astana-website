@@ -8,7 +8,7 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://astana-cold.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://astanacoldchain.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -72,6 +72,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "PUQS0qCtAWkfkMxmX1q2N39cOTl5_JzMHr90BfNKo8I",
   },
 };
 

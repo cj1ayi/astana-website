@@ -53,7 +53,7 @@ const openings: Job[] = [
     ],
   },
   {
-    title: "Cold Storage Technician",
+    title: "Plant Operator / Maintenance",
     department: "Maintenance",
     type: "Full-Time",
     location: "Muntinlupa City",

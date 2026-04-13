@@ -40,7 +40,7 @@ const fullSpecs = [
   { Icon: Wind, label: "Cooling", value: "Inverter System" },
   { Icon: Sun, label: "Energy", value: "Solar Panel Ready" },
   { Icon: Shield, label: "CCTV Retention", value: "6-Month Storage" },
-  { Icon: Package, label: "WMS", value: "3MWorks System" },
+  { Icon: Package, label: "WMS", value: "Cloud-Based System" },
   { Icon: Building, label: "Parking Area", value: "830 sqm" },
 ];
 
@@ -48,7 +48,7 @@ const chambers = [
   {
     Icon: Snowflake,
     title: "Freezer Rooms",
-    count: "12 Rooms",
+    count: "13 Rooms",
     temp: "-18°C to -22°C",
     color: "bg-blue-50 border-blue-100",
     iconColor: "text-blue-500 bg-blue-100",
@@ -119,7 +119,7 @@ const techSections = [
       "24/7 on-site security personnel",
       "CCTV with 6-month video retention",
       "Controlled access per cold room",
-      "3MWorks WMS — RF picking & barcode scanning",
+      "Cloud-based WMS — RF picking & barcode scanning",
       "FIFO/FEFO inventory management",
     ],
   },
