@@ -105,7 +105,7 @@ export default function Locations() {
                 href="mailto:raqueltan@astanacoldchain.com"
                 className="mt-auto text-xs font-bold text-primary uppercase tracking-widest hover:underline"
               >
-                phoebevitales@astastanacoldchain.com
+                phoebevitales@astanacoldchain.com
               </a>
             </div>
           </FadeInOnScroll>
@@ -145,7 +145,7 @@ export default function Locations() {
                 href="mailto:raqueltan@astanacoldchain.com"
                 className="mt-auto text-xs font-bold text-primary uppercase tracking-widest hover:underline"
               >
-                phoebevitales@astastanacoldchain.com
+                phoebevitales@astanacoldchain.com
               </a>
             </div>
           </FadeInOnScroll>
